@@ -5,7 +5,29 @@
     <div class="col-md-6 mx-auto mb-5">
       <div class="mb-3">
         <%= f.label :name, class: "form-label border-start border-primary border-4" %>
-        <%= f.text_field :name, size: 40, placeholder: "サンプルサンプル", class: "form-control" %>
+        <%= f.text_field :name, size: 40, placeholder: "サンプル太郎", class: "form-control" %>
+        <%= render partial: "shared/error_messages", locals: { record: @order, symbol: :name } %>
+      </div>
+    </div>
+    <div class="col-md-6 mx-auto mb-5">
+      <div class="mb-3">
+        <%= f.label :email, class: "form-label border-start border-primary border-4" %>
+        <%= f.text_field :email, size: 100, placeholder: "sample@example.com", class: "form-control" %>
+        <%= render partial: "shared/error_messages", locals: { record: @order, symbol: :email } %>
+      </div>
+    </div>
+    <div class="col-md-6 mx-auto mb-5">
+      <div class="mb-3">
+        <%= f.label :telephone, class: "form-label border-start border-primary border-4" %>
+        <%= f.text_field :telephone, size: 40, placeholder: "09034747259", class: "form-control" %>
+        <%= render partial: "shared/error_messages", locals: { record: @order, symbol: :telephone } %>
+      </div>
+    </div>
+    <div class="col-md-6 mx-auto mb-5">
+      <div class="mb-3">
+        <%= f.label :delivery_address, class: "form-label border-start border-primary border-4" %>
+        <%= f.text_field :delivery_address, size: 40, placeholder: "東京都新宿区高田馬場1-5-8", class: "form-control" %>
+        <%= render partial: "shared/error_messages", locals: { record: @order, symbol: :delivery_address } %>
       </div>
     </div>
 
